@@ -9,6 +9,11 @@
         <servlet-name>BasicServlet</servlet-name>
         <url-pattern>/BasicServlet</url-pattern>
     </servlet-mapping>
+    
+     <servlet-mapping>
+        <servlet-name>BasicServlet</servlet-name>
+        <url-pattern>/BasicServletAlias</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

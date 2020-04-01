@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "GAEDebug",
+        "type": "shell",
+        "command": "mvn clean package appengine:run",
+        "isBackground": true,
+        "problemMatcher": [
+          {
+            "pattern": [
+              {
+                "regexp": "\\b\\B",
+                "file": 1,
+                "location": 2,
+                "message": 3
+              }
+            ],
+            "background": {
+              "beginsPattern": "^.*Scanning for projects",
+              "endsPattern": "^.*Listening for transport dt_socket at address.*"
+            }
+          }
+        ],
+        "presentation": {  
+          "reveal": "never"
+        }
+      },
+      {
+        "label": "GAEStop",
+        "type": "shell",
+        "command": "mvn appengine:stop",
+        "isBackground": true,
+        "presentation": {  
+          "reveal": "never"
+        }
+      }
+    ]
+  }

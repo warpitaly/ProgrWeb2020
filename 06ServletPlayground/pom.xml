@@ -43,6 +43,23 @@
           <target>1.5</target>
         </configuration>
       </plugin>
+      
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>2.2.0</version>
+        <configuration>
+          <projectId>progrweb2020</projectId>
+          <version>2</version>
+          
+          <jvmFlags>
+            <jvmFlag>-Xdebug</jvmFlag>
+            <jvmFlag>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmFlag>
+          </jvmFlags>
+          
+        </configuration>
+      </plugin>
+      
     </plugins>
   </build>
 </project>

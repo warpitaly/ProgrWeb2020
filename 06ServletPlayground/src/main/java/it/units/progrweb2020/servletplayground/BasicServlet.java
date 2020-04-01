@@ -27,7 +27,7 @@ public class BasicServlet extends HttpServlet {
       out.println("<!DOCTYPE html>");
       out.println("<html>");
       out.println("  <head>");
-      out.println("    <title>ServletTTTT BasicServlet</title>");      
+      out.println("    <title>Servlet BasicServlet</title>");      
       out.println("  </head>");
       out.println("  <body>");
       Date d = new Date();

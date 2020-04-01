@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "GAE DBG",
+        "preLaunchTask": "GAEDebug",
+        "postDebugTask": "GAEStop",
+        "request": "attach",
+        "hostName": "localhost",
+        "port": 5005
+      }
+    ]
+  }
