@@ -3,7 +3,7 @@
 xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 xsi:schemaLocation='http://kenai.com/projects/nbappengine/downloads/download/schema/appengine-web.xsd appengine-web.xsd'>
     <application>progrweb2020</application>
-    <version>2</version>
+    <version>1</version>
     <!--    <ssl-enabled>false</ssl-enabled>
     <sessions-enabled>true</sessions-enabled>
     -->

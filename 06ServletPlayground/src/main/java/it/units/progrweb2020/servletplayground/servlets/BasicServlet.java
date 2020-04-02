@@ -1,4 +1,4 @@
-package it.units.progrweb2020.servletplayground;
+package it.units.progrweb2020.servletplayground.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;

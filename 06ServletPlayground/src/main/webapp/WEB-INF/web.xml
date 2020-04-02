@@ -3,23 +3,39 @@
     <display-name>06ServletPlayground</display-name>
     <servlet>
         <servlet-name>BasicServlet</servlet-name>
-        <servlet-class>it.units.progrweb2020.servletplayground.BasicServlet</servlet-class>
+        <servlet-class>it.units.progrweb2020.servletplayground.servlets.BasicServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Invertitore</servlet-name>
+        <servlet-class>it.units.progrweb2020.servletplayground.servlets.Invertitore</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InvertitoreMVC</servlet-name>
+        <servlet-class>it.units.progrweb2020.servletplayground.servlets.InvertitoreMVC</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>BasicServlet</servlet-name>
         <url-pattern>/BasicServlet</url-pattern>
     </servlet-mapping>
-    
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>BasicServlet</servlet-name>
         <url-pattern>/BasicServletAlias</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Invertitore</servlet-name>
+        <url-pattern>/Invertitore</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InvertitoreMVC</servlet-name>
+        <url-pattern>/InvertitoreMVC</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
-        </session-timeout>
+      30
+    </session-timeout>
     </session-config>
     <welcome-file-list>
+        <welcome-file>invertimi.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
