@@ -13,6 +13,10 @@
         <servlet-name>InvertitoreMVC</servlet-name>
         <servlet-class>it.units.progrweb2020.servletplayground.servlets.InvertitoreMVC</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AjaxMessagesViewer</servlet-name>
+        <servlet-class>it.units.progrweb2020.servletplayground.servlets.AjaxMessagesViewer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BasicServlet</servlet-name>
         <url-pattern>/BasicServlet</url-pattern>
@@ -28,6 +32,10 @@
     <servlet-mapping>
         <servlet-name>InvertitoreMVC</servlet-name>
         <url-pattern>/InvertitoreMVC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AjaxMessagesViewer</servlet-name>
+        <url-pattern>/AjaxMessagesViewer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

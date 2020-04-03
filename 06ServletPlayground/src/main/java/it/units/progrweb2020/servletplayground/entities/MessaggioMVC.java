@@ -1,4 +1,4 @@
-package it.units.progrweb2020.servletplayground.Entities;
+package it.units.progrweb2020.servletplayground.entities;
 
 /**
  *

@@ -1,6 +1,6 @@
 package it.units.progrweb2020.servletplayground.servlets;
 
-import it.units.progrweb2020.servletplayground.Entities.MessaggioMVC;
+import it.units.progrweb2020.servletplayground.entities.MessaggioMVC;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

@@ -4,7 +4,7 @@
     Author     : giorgio
 --%>
 
-<%@page import="it.units.progrweb2020.servletplayground.Entities.MessaggioMVC"%>
+<%@page import="it.units.progrweb2020.servletplayground.entities.MessaggioMVC"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
