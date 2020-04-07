@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>07Sicurezza</display-name>
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>it.units.progrweb2020.sicurezza.filters.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/private/*</url-pattern>
+    </filter-mapping>
+   
+    <session-config>
+        <session-timeout>
+      30
+    </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <security-constraint>
+      <web-resource-collection>
+        <url-pattern>/privateGAE/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+</web-app>
