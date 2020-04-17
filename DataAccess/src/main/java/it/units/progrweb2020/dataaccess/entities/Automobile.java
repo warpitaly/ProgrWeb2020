@@ -1,3 +1,6 @@
+/// NOTA!!! Questa entità non la salvo con l'ORM ma manualmente, è stata creata solo per far capire quanta fatica si fa (v. JDBC.java)
+
+
 package it.units.progrweb2020.dataaccess.entities;
 
 /**

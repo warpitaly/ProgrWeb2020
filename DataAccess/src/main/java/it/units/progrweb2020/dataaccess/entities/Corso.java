@@ -1,17 +1,19 @@
 package it.units.progrweb2020.dataaccess.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.NamedQuery;
 
-
+/**
+ *
+ * @author giorgio
+ */
 @Entity
-public class Studente implements Serializable {
+@NamedQuery(name = "Corso.findAll", query = "SELECT c from Corso c")
+public class Corso implements Serializable {
 
   private static final long serialVersionUID = 1L;
   @Id
@@ -19,42 +21,7 @@ public class Studente implements Serializable {
   private Long id;
   
   private String nome;
-  
-  private String cognome;
-  
-  public int annoImmatricolazione;
-  
-  @OneToMany(mappedBy = "stud")
-  private List<Esame> esami = new ArrayList<>();
-
-  
-  
-  public void addEsame(Esame e){
-    e.setStud(this);
-    esami.add(e);
-  }
-  
-  
-  
-  public List<Esame> getEsami() {
-    return esami;
-  }
-
-  public void setEsami(List<Esame> esami) {
-    this.esami = esami;
-  }
-
-  
-  
-  public int getAnnoImmatricolazione() {
-    return annoImmatricolazione;
-  }
-
-  public void setAnnoImmatricolazione(int annoImmatricolazione) {
-    this.annoImmatricolazione = annoImmatricolazione;
-  }
-  
-  
+  private String aula;
 
   public String getNome() {
     return nome;
@@ -64,14 +31,14 @@ public class Studente implements Serializable {
     this.nome = nome;
   }
 
-  public String getCognome() {
-    return cognome;
+  public String getAula() {
+    return aula;
   }
 
-  public void setCognome(String cognome) {
-    this.cognome = cognome;
+  public void setAula(String aula) {
+    this.aula = aula;
   }
-  
+         
   
 
   public Long getId() {
@@ -92,10 +59,10 @@ public class Studente implements Serializable {
   @Override
   public boolean equals(Object object) {
     // TODO: Warning - this method won't work in the case the id fields are not set
-    if (!(object instanceof Studente)) {
+    if (!(object instanceof Corso)) {
       return false;
     }
-    Studente other = (Studente) object;
+    Corso other = (Corso) object;
     if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
       return false;
     }
@@ -104,7 +71,7 @@ public class Studente implements Serializable {
 
   @Override
   public String toString() {
-    return "it.units.progrweb2020.dataaccess.entities.Studente[ id=" + id + " ]";
+    return "it.units.progrweb2020.dataaccess.entities.Corso[ id=" + id + " ]";
   }
 
 }
