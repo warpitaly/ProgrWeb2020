@@ -87,7 +87,7 @@ public class SalvaOfy extends HttpServlet {
       SuvHelper.saveDelayed(suv);
       
       
-      Car appenaSalvata = CarHelper.getByKey(auto.getId()+"");
+      Car appenaSalvata = CarHelper.getById(Car.class, auto.getId());
       
       out.println("</body>");
       out.println("</html>");

@@ -15,8 +15,8 @@ public abstract class AbstractHelper<T> {
     ofy().save().entity(t).now();
   }
   
-  public static <T> T getByKey(String id){
-    Key<T> k = Key.create(id);
+  public static <T> T getById(Class<T> c, Long id){
+    Key<T> k = Key.create(c, id);
     return ofy().load().key(k).now();
   }
 }
