@@ -1,5 +1,6 @@
 package it.units.progrweb2020.rest.entities.proxies;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import it.units.progrweb2020.rest.entities.storage.Studente;
 
 /**
@@ -9,6 +10,7 @@ import it.units.progrweb2020.rest.entities.storage.Studente;
 public class StudenteProxy {
   private String nome;
   private String cognome;
+  private int id;
   
 
   public StudenteProxy() {
@@ -17,19 +19,21 @@ public class StudenteProxy {
   public StudenteProxy(Studente originale){
     this.nome = originale.getNome();
     this.cognome = originale.getCognome();
-  }
-  
-  public Studente getStudente(){
-    return new Studente(nome, cognome, 0);
-  }
-  
-  public StudenteProxy(String nome, String cognome) {
-    this.nome = nome;
-    this.cognome = cognome;
-   
+    this.id = originale.getId();
   }
 
+  @Hidden
+  public Studente getStudente(){
+    //probabilmente lo recupero dallo storage partendo dall'id
+    return new Studente(nome, cognome, id, true);
+  }
   
+  public StudenteProxy(String nome, String cognome, int id) {
+    this.nome = nome;
+    this.cognome = cognome;
+    this.id = id;
+  }
+
   
   public String getNome() {
     return nome;
@@ -47,7 +51,15 @@ public class StudenteProxy {
     this.cognome = cognome;
   }
 
- 
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  
   
   
 }

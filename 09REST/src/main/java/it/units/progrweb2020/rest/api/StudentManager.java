@@ -22,7 +22,7 @@ public class StudentManager {
   @Produces(MediaType.APPLICATION_JSON)
   public StudenteProxy getStudenteById(@PathParam("id") int id){
     //uso gli helper di persistance per ottenere lo STUDENTE con quell'ID
-    Studente studVero = new Studente("giorgio", "Davanzo", 10);
+    Studente studVero = new Studente("giorgio", "Davanzo", 10, true);
     StudenteProxy studProxy = new StudenteProxy(studVero);
     return studProxy;
   }

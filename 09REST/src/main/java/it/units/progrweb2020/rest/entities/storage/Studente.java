@@ -9,15 +9,26 @@ public class Studente {
   private String nome;
   private String cognome;
   private int id;
+  private boolean raccomandato;
 
   public Studente() {
   }
 
-  public Studente(String nome, String cognome, int id) {
+  public Studente(String nome, String cognome, int id, boolean raccomandato) {
     this.nome = nome;
     this.cognome = cognome;
     this.id = id;
+    this.raccomandato = raccomandato;
   }
+
+  public boolean isRaccomandato() {
+    return raccomandato;
+  }
+
+  public void setRaccomandato(boolean raccomandato) {
+    this.raccomandato = raccomandato;
+  }
+  
 
   public String getNome() {
     return nome;
