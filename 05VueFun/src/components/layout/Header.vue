@@ -1,6 +1,10 @@
 <template>
   <header>
     <h1><slot>App Senza Nome</slot></h1>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
   </header>
 </template>
 
